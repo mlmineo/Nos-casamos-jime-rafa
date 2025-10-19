@@ -78,6 +78,8 @@
     <!-- ✅ Música desde 'audio/somos-uno.mp3' -->
     <audio id="bgm" preload="auto" loop>
       <source src="audio/somos-uno.mp3" type="audio/mpeg">
+      [Axel y Abel pintos - Somos Uno.mp3](https://github.com/user-attachments/files/22993011/Axel.y.Abel.pintos.-.Somos.Uno.mp3)
+
     </audio>
 
     <!-- ✅ Botón musical usando la misma imagen -->
@@ -106,7 +108,7 @@
       <div class="grid">
         <img src="1.jpg" alt="Jime y Rafa 1" loading="lazy"/>
         <img src="2.jpg" alt="Jime y Rafa 2" loading="lazy"/>
-        <img src="3.jpg" alt="Jime y Rafa 3" loading="lazy"/>
+        <img src="31.jpg" alt="Jime y Rafa 3" loading="lazy"/>
         <img src="4.jpg" alt="Jime y Rafa 4" loading="lazy"/>
         <img src="5.jpg" alt="Jime y Rafa 5" loading="lazy"/>
         <img src="6.jpg" alt="Jime y Rafa 6" loading="lazy"/>

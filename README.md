@@ -76,7 +76,7 @@
     </audio>
     <!-- 🔔 Botón musical con imagen -->
     <button id="musicToggle" class="music-btn" aria-label="Música">
-      <img src="anillos.png" alt="Anillos Jime & Rafa">
+      <img src="anillos-jime-rafa.jpg" alt="Anillos Jime & Rafa">
     </button>
   </header>
 

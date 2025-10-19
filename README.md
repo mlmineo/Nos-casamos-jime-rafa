@@ -14,16 +14,23 @@
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,Arial,sans-serif}
     .hero{
       position:relative;min-height:75vh;
-      background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.35)),url('1.jpg') center/cover no-repeat;
+      /* ✅ Fondo gris liso (sin 1.jpg) */
+      background:#e6e6e6;
       display:grid;place-items:center
     }
-    .overlay{position:absolute;inset:0;background:radial-gradient(transparent,rgba(0,0,0,.25))}
+    .overlay{position:absolute;inset:0;background:radial-gradient(transparent,rgba(0,0,0,.08))}
     .hero-inner{position:relative;text-align:center;color:#fff;padding:2rem}
-    .names{font-family:'Great Vibes',cursive;font-size:4rem;margin:.25rem 0}
+    /* ✅ Logo de anillos en la portada */
+    .hero-logo{
+      display:block;margin:0 auto 1rem auto;
+      width:min(60vw, 340px); height:auto;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,.25));
+    }
+    .names{font-family:'Great Vibes',cursive;font-size:4rem;margin:.25rem 0;color:#fff}
     .names span{color:var(--gold)}
-    .date{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:.3rem}
-    .subtitle{opacity:.9;margin:.5rem 0 1rem}
-    .countdown{margin:1rem auto;font-weight:600;background:rgba(255,255,255,.15);padding:.5rem 1rem;border-radius:999px;backdrop-filter:blur(4px)}
+    .date{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:.3rem;color:#fff}
+    .subtitle{opacity:.95;margin:.5rem 0 1rem;color:#fff}
+    .countdown{margin:1rem auto;font-weight:600;background:rgba(0,0,0,.15);padding:.5rem 1rem;border-radius:999px;backdrop-filter:blur(4px);color:#fff}
     .btn{display:inline-block;border:none;background:var(--gold);color:#fff;padding:.75rem 1.25rem;border-radius:999px;cursor:pointer;text-decoration:none;font-weight:600;transition:.2s}
     .btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
     .btn.primary{background:var(--leaf)} .btn.outline{background:transparent;border:2px solid var(--leaf);color:var(--leaf)}
@@ -49,13 +56,18 @@
     input,select{padding:.7rem .8rem;border:1px solid var(--sand);border-radius:10px;font:inherit}
     .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.75rem}
     .footer{padding:2rem 1rem;text-align:center;color:#6b625a}
-    @media (max-width:640px){.names{font-size:3rem}.gallery img{height:150px}.row{grid-template-columns:1fr}}
+    @media (max-width:640px){
+      .names{font-size:3rem}.gallery img{height:150px}.row{grid-template-columns:1fr}
+      .hero-logo{width:min(70vw, 320px)}
+    }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="overlay"></div>
     <div class="hero-inner">
+      <!-- ✅ Imagen centrada en la portada -->
+      <img src="anillos-jime-rafa.jpg" class="hero-logo" alt="Anillos Jime & Rafa">
       <h1 class="names">Jime & Rafa</h1>
       <p class="date">14 · 11 · 2025</p>
       <p class="subtitle">¡Nos casamos!</p>
@@ -63,13 +75,14 @@
       <button id="rsvpBtn" class="btn primary">Confirmar asistencia</button>
     </div>
 
-    <!-- Música -->
-   <audio id="bgm" preload="auto" loop>
-  <source src="audio/somos-uno.mp3" type="audio/mpeg">
-</audio>
-    <!-- Botón musical usando tu imagen -->
+    <!-- ✅ Música desde 'audio/somos-uno.mp3' -->
+    <audio id="bgm" preload="auto" loop>
+      <source src="audio/somos-uno.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ✅ Botón musical usando la misma imagen -->
     <button id="musicToggle" class="music-btn" aria-label="Música">
-      <img src="anillos.jpg" alt="Anillos Jime & Rafa">
+      <img src="anillos-jime-rafa.jpg" alt="Anillos Jime & Rafa">
     </button>
   </header>
 
@@ -102,6 +115,7 @@
         <img src="9.jpg" alt="Jime y Rafa 9" loading="lazy"/>
       </div>
     </section>
+
     <section class="gift card">
       <h2>Regalo</h2>
       <p>Tu presencia es lo más importante para nosotros. 💛
@@ -142,7 +156,7 @@
             <input type="number" name="acompanantes" min="0" value="0" required />
           </label>
           <label>Recomienda un temazo para el baile
-            <input type="text" name="mensaje" placeholder="¿Que quieres escuchar?" />
+            <input type="text" name="mensaje" placeholder="¿Qué querés escuchar?" />
           </label>
         </div>
         <div class="actions">
@@ -174,7 +188,7 @@
 
     // Música
     const bgm = document.getElementById('bgm');
-    const musicBtn = document.getElementById('musicToggle'); // ✅ id correcto
+    const musicBtn = document.getElementById('musicToggle');
     let musicOn = false;
     musicBtn.addEventListener('click', async () => {
       try{

@@ -15,7 +15,7 @@
     .hero{
       position:relative;min-height:75vh;
       /* ✅ Fondo gris liso (sin 1.jpg) */
-      background:#e6e6e6;
+      background:#f6d49a;
       display:grid;place-items:center
     }
     .overlay{position:absolute;inset:0;background:radial-gradient(transparent,rgba(0,0,0,.08))}

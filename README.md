@@ -64,13 +64,12 @@
     </div>
 
     <!-- Música -->
-    <audio id="bgm" preload="auto" loop>
-      <source src="audio/Axel-y-Abel-pintos-Somos-Uno.mp3" type="audio/mpeg">
-    </audio>
-
+   <audio id="bgm" preload="auto" loop>
+  <source src="audio/somos-uno.mp3" type="audio/mpeg">
+</audio>
     <!-- Botón musical usando tu imagen -->
     <button id="musicToggle" class="music-btn" aria-label="Música">
-      <img src="anillos-jime-rafa.jpg" alt="Anillos Jime & Rafa">
+      <img src="anillos.jpg" alt="Anillos Jime & Rafa">
     </button>
   </header>
 
@@ -84,7 +83,7 @@
 
     <section class="card">
       <h2>La Celebración</h2>
-      <p><strong>Sábado 15/11 a las 20:00 hs</strong></p>
+      <p><strong>Festejamos juntos el día Sábado 15/11 a las 20:00 hs</strong></p>
       <p>📍 Puente Gualeguaychú 1359, General Rodríguez, Provincia de Buenos Aires</p>
       <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Puente+Gualeguaych%C3%BA+1359+General+Rodr%C3%ADguez+Buenos+Aires">Ver en Maps</a>
     </section>
@@ -103,10 +102,10 @@
         <img src="9.jpg" alt="Jime y Rafa 9" loading="lazy"/>
       </div>
     </section>
-
     <section class="gift card">
       <h2>Regalo</h2>
-      <p>Tu presencia es lo más importante para nosotros. Si además querés hacernos un regalo te compartimos nuestros datos bancarios 💛</p>
+      <p>Tu presencia es lo más importante para nosotros. 💛
+      Si además querés hacernos un regalo te compartimos nuestros datos:</p>
       <div class="gift-boxes">
         <div class="gift-box">
           <p><strong>Alias:</strong> jime.la.gringa</p>
@@ -142,8 +141,8 @@
           <label>Acompañantes
             <input type="number" name="acompanantes" min="0" value="0" required />
           </label>
-          <label>Mensaje
-            <input type="text" name="mensaje" placeholder="¿Algo que quieras decirnos? Recomienda algún tema para el baile" />
+          <label>Recomienda un temazo para el baile
+            <input type="text" name="mensaje" placeholder="¿Que quieres escuchar?" />
           </label>
         </div>
         <div class="actions">

@@ -7,14 +7,14 @@
   <meta name="description" content="Invitación de boda de Jime & Rafa" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root{ --bg:#faf7f2; --ink:#2e2a26; --gold:#b08968; --sand:#e8dccb; --leaf:#7a8f69; }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,Arial,sans-serif}
     .hero{
       position:relative;min-height:75vh;
-      /* ✅ Fondo gris liso (sin 1.jpg) */
+      /* ✅ Fondo naranja (sin 1.jpg) */
       background:#f6d49a;
       display:grid;place-items:center
     }
@@ -77,15 +77,15 @@
 
     <!-- ✅ Música desde 'audio/somos-uno.mp3' -->
     <audio id="bgm" preload="auto" loop>
-      <source src="audio/somos-uno.mp3" type="audio/mpeg">
-      [Axel y Abel pintos - Somos Uno.mp3](https://github.com/user-attachments/files/22993011/Axel.y.Abel.pintos.-.Somos.Uno.mp3)
-
-    </audio>
+      <source src="C:\Users\Laura\Pictures\Casamiento_Jime&Rafa\Axel y Abel pintos - Somos Uno.mp3" type="audio/mpeg">
+    
+        </audio>
 
     <!-- ✅ Botón musical usando la misma imagen -->
     <button id="musicToggle" class="music-btn" aria-label="Música">
-      <img src="anillos-jime-rafa.jpg" alt="Anillos Jime & Rafa">
-    </button>
+  <img src="anillos-jime-rafa.jpg" alt="Anillos Jime & Rafa" width="60">
+</button>
+
   </header>
 
   <main>
@@ -112,7 +112,7 @@
         <img src="4.jpg" alt="Jime y Rafa 4" loading="lazy"/>
         <img src="5.jpg" alt="Jime y Rafa 5" loading="lazy"/>
         <img src="6.jpg" alt="Jime y Rafa 6" loading="lazy"/>
-        <img src="7.jpg" alt="Jime y Rafa 7" loading="lazy"/>
+        <img src="71.jpg" alt="Jime y Rafa 7" loading="lazy"/>
         <img src="8.jpg" alt="Jime y Rafa 8" loading="lazy"/>
         <img src="9.jpg" alt="Jime y Rafa 9" loading="lazy"/>
       </div>
@@ -189,16 +189,16 @@
     setInterval(tick,1000); tick();
 
     // Música
-    const bgm = document.getElementById('bgm');
-    const musicBtn = document.getElementById('musicToggle');
-    let musicOn = false;
-    musicBtn.addEventListener('click', async () => {
-      try{
-        if(!musicOn){ await bgm.play(); musicOn = true; musicBtn.style.borderColor='#7a8f69'; }
-        else { bgm.pause(); musicOn = false; musicBtn.style.borderColor='#fff'; }
-      }catch(e){}
-    });
+const bgm = document.getElementById('bgm');
+const musicToggle = document.getElementById('musicToggle');
 
+musicToggle.addEventListener('click', () => {
+  if (bgm.paused) {
+    bgm.play();
+  } else {
+    bgm.pause();
+  }
+});
     // Scroll al RSVP
     document.getElementById('rsvpBtn').addEventListener('click', ()=>{
       document.getElementById('rsvp').scrollIntoView({behavior:'smooth'});

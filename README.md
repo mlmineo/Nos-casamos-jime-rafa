@@ -131,13 +131,13 @@
       <div class="grid">
         <img src="1.jpg" alt="Jime y Rafa 1" loading="lazy"/>
         <img src="2.jpg" alt="Jime y Rafa 2" loading="lazy"/>
-        <img src="Nos-casamos-jime-rafa/31.jpg" alt="Jime y Rafa 3" loading="lazy"/>
+        <img src="a.jpg" alt="Jime y Rafa 3" loading="lazy"/>
         <img src="4.jpg" alt="Jime y Rafa 4" loading="lazy"/>
         <img src="5.jpg" alt="Jime y Rafa 5" loading="lazy"/>
         <img src="6.jpg" alt="Jime y Rafa 6" loading="lazy"/>
-       <img src="Nos-casamos-jime-rafa/71.jpg" alt="Jime y Rafa 7" loading="lazy"/>
+        <img src="b.jpg" alt="Jime y Rafa 7" loading="lazy"/>
         <img src="8.jpg" alt="Jime y Rafa 8" loading="lazy"/>
-        <img src="Nos-casamos-jime-rafa/9.jpg" alt="Jime y Rafa 9" loading="lazy"/>
+        <img src="c.jpg" alt="Jime y Rafa 9" loading="lazy"/>
       </div>
     </section>
 

@@ -90,6 +90,8 @@
       <h1 class="names">Jime & Rafa</h1>
       <p class="date">14 · 11 · 2025</p>
       <p class="subtitle">¡Nos casamos!</p>
+        <!-- ⏳ Cuenta regresiva arriba del WhatsApp -->
+    <div id="countdown" class="countdown" aria-live="polite"></div>
       <button id="rsvpBtn" class="btn primary">Confirmar asistencia</button>
     </div>
 
@@ -108,8 +110,7 @@
   </header>
 
   <main>
-    <!-- ⏳ Cuenta regresiva arriba del WhatsApp -->
-    <div id="countdown" class="countdown" aria-live="polite"></div>
+  
 
     <section class="card">
       <h2>El Civil</h2>
@@ -130,13 +131,13 @@
       <div class="grid">
         <img src="1.jpg" alt="Jime y Rafa 1" loading="lazy"/>
         <img src="2.jpg" alt="Jime y Rafa 2" loading="lazy"/>
-        <img src="3.jpg" alt="Jime y Rafa 3" loading="lazy"/>
+        <img src="Nos-casamos-jime-rafa/31.jpg" alt="Jime y Rafa 3" loading="lazy"/>
         <img src="4.jpg" alt="Jime y Rafa 4" loading="lazy"/>
         <img src="5.jpg" alt="Jime y Rafa 5" loading="lazy"/>
         <img src="6.jpg" alt="Jime y Rafa 6" loading="lazy"/>
-        <img src="7.jpg" alt="Jime y Rafa 7" loading="lazy"/>
+       <img src="Nos-casamos-jime-rafa/71.jpg" alt="Jime y Rafa 7" loading="lazy"/>
         <img src="8.jpg" alt="Jime y Rafa 8" loading="lazy"/>
-        <img src="9.jpg" alt="Jime y Rafa 9" loading="lazy"/>
+        <img src="Nos-casamos-jime-rafa/9.jpg" alt="Jime y Rafa 9" loading="lazy"/>
       </div>
     </section>
 

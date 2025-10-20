@@ -138,97 +138,57 @@
       </div>
     </section>
 
-    <section class="card rsvp" id="rsvp">
-      <h2>Confirmación de asistencia</h2>
-      <p>¡Nos encanta que quieras venir! Completá este formulario y te leemos.</p>
-      <form id="rsvpForm">
-        <div class="row">
-          <label>Nombre y Apellido
-            <input type="text" name="nombre" required />
-          </label>
-          <label>¿Asistís?
-            <select name="asiste" required>
-              <option value="Sí">Sí</option>
-              <option value="No">No</option>
-            </select>
-          </label>
-        </div>
-        <div class="row">
-          <label>Acompañantes
-            <input type="number" name="acompanantes" min="0" value="0" required />
-          </label>
-          <label>Recomienda un temazo para el baile
-            <input type="text" name="mensaje" placeholder="¿Qué querés escuchar?" />
-          </label>
-        </div>
-        <div class="actions">
-          <button type="submit" class="btn primary">Enviar confirmación</button>
-        </div>
-        <p class="help">Las confirmaciones se envían a <strong>jimena.rocco@hotmail.com</strong>.</p>
-      </form>
-    </section>
-  </main>
+<section class="card rsvp" id="rsvp">
+  <h2>Confirmación de asistencia</h2>
+  <p>¡Nos encanta que quieras venir! Completá este formulario y confirmá por WhatsApp 💬</p>
 
-  <footer class="footer">
-    <p>Con amor, Jime & Rafa • 14/11/2025</p>
-  </footer>
+  <form id="rsvpForm">
+    <div class="form-group">
+      <label for="nombre">Nombre y Apellido</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+    </div>
 
-  <script>
-    // Cuenta regresiva (AR)
-    const target = new Date('2025-11-14T13:30:00-03:00').getTime();
-    const cd = document.getElementById('countdown');
-    function tick(){
-      const now = Date.now();
-      let diff = Math.max(0, target - now);
-      const d = Math.floor(diff/86400000); diff%=86400000;
-      const h = Math.floor(diff/3600000); diff%=3600000;
-      const m = Math.floor(diff/60000); diff%=60000;
-      const s = Math.floor(diff/1000);
-      cd.textContent = d+"d "+h+"h "+m+"m "+s+"s";
-    }
-    setInterval(tick,1000); tick();
+    <div class="form-group">
+      <label for="asistencia">¿Asistís?</label>
+      <select id="asistencia" name="asistencia" required>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+    </div>
 
-    // Música
-const bgm = document.getElementById('bgm');
-const musicToggle = document.getElementById('musicToggle');
+    <div class="form-group">
+      <label for="acompanantes">Acompañantes</label>
+      <input type="number" id="acompanantes" name="acompanantes" value="0" min="0" required>
+    </div>
 
-musicToggle.addEventListener('click', () => {
-  if (bgm.paused) {
-    bgm.play();
-  } else {
-    bgm.pause();
-  }
-});
-    // Scroll al RSVP
-    document.getElementById('rsvpBtn').addEventListener('click', ()=>{
-      document.getElementById('rsvp').scrollIntoView({behavior:'smooth'});
-    });
+    <div class="form-group">
+      <label for="cancion">Recomendá un temazo para el baile</label>
+      <input type="text" id="cancion" name="cancion" placeholder="¿Qué querés escuchar?">
+    </div>
 
-    // Copiar alias
-    document.querySelectorAll('.copy').forEach(btn=>{
-      btn.addEventListener('click', async ()=>{
-        try{ await navigator.clipboard.writeText(btn.dataset.copy);
-          btn.textContent='Copiado ✓'; setTimeout(()=>btn.textContent='Copiar alias',2000);
-        }catch(e){}
-      });
-    });
+    <button type="submit" class="btn">Enviar confirmación</button>
+  </form>
 
-    // Envío por mail (mailto)
-    const form = document.getElementById('rsvpForm');
-    function compose(data){
-      return 'Confirmación boda Jime & Rafa%0A%0A' +
-             'Nombre: ' + data.nombre + '%0A' +
-             'Asiste: ' + data.asiste + '%0A' +
-             'Acompañantes: ' + data.acompanantes + '%0A' +
-             'Mensaje: ' + (data.mensaje||'');
-    }
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
-      const subject = encodeURIComponent('Boda Jime & Rafa');
-      const body = compose(data);
-      window.location.href = 'mailto:jimena.rocco@hotmail.com?subject='+subject+'&body='+body;
-    });
-  </script>
+  <p class="note">Las confirmaciones se envían por WhatsApp al <strong>+54 9 11 6044-9885</strong>.</p>
+</section>
+
+<script>
+  document.getElementById("rsvpForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nombre = encodeURIComponent(document.getElementById("nombre").value);
+    const asistencia = encodeURIComponent(document.getElementById("asistencia").value);
+    const acompanantes = encodeURIComponent(document.getElementById("acompanantes").value);
+    const cancion = encodeURIComponent(document.getElementById("cancion").value);
+
+    const mensaje = `¡Hola! Soy ${nombre}. Confirmo asistencia: ${asistencia}. Acompañantes: ${acompanantes}. Sugerencia musical: ${cancion}.`;
+
+    const telefono = "5491160449885";
+    const url = `https://wa.me/${telefono}?text=${mensaje}`;
+
+    window.open(url, "_blank");
+  });
+</script>
+
 </body>
 </html>

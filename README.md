@@ -101,7 +101,8 @@
 
     <!-- Botón musical -->
     <button id="musicToggle" class="music-btn" aria-label="Música">
-      <img src="🎵" alt="Anillos Jime & Rafa">
+      <img src="[icono-musica](https://github.com/user-attachments/assets/d668cc27-f035-49d6-9357-ce233e636697)
+" alt="Música">
     </button>
   </header>
 

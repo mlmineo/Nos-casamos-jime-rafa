@@ -140,6 +140,23 @@
         <img src="c.jpg" alt="Jime y Rafa c" loading="lazy"/>
       </div>
     </section>
+<section class="card gift">
+  <h2>Regalo</h2>
+  <p>Tu presencia es lo más importante para nosotros 💛</p>
+  <p>Si querés hacernos un obsequio podés hacerlo al siguiente Mercado Pago:</p>
+
+  <div class="gift-boxes">
+    <div class="gift-box">
+      <p><strong>Alias:</strong> jime.la.gringa</p>
+      <p><strong>CVU:</strong> 0000003100073131930184</p>
+      <p><strong>Nombre:</strong> Mariela Jimena Ormeño</p>
+      <button class="btn copy" data-copy="jime.la.gringa">Copiar alias</button>
+    </div>
+    <div class="gift-box">
+      <p><strong>También podés colaborar en efectivo el día del evento 💌</strong></p>
+    </div>
+  </div>
+</section>
 
     <section class="card rsvp" id="rsvp">
       <h2>Confirmación de asistencia</h2>

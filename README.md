@@ -12,6 +12,12 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,Arial,sans-serif}
 
+    /* Oculta el encabezado automático de GitHub Pages */
+    header > h1,
+    #header,
+    h1.project-name {
+    display: none !important;
+}
     .hero{
       position:relative;min-height:75vh;
       background:var(--bg);

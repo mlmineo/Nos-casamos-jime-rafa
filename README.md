@@ -94,11 +94,12 @@
       <button id="rsvpBtn" class="btn primary">Confirmar asistencia</button>
     </div>
 
-    <!-- Audio -->
-    <audio id="bgm" preload="auto" loop playsinline>
-      <source src="audio/somos-uno.mp3" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
+  <!-- 🎵 Música: Somos Uno - Axel ft. Abel Pintos -->
+<audio id="bgm" preload="auto" loop playsinline>
+  <source src="https://raw.githubusercontent.com/mlmineo/Nos-casamos-jime-rafa/main/Axel_-_Somos_Uno_feat._Abel_Pintos_(mp3.pm).mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
 
     <!-- Botón musical con icono -->
     <button id="musicToggle" class="music-btn" aria-label="Música">

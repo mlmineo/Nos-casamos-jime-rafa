@@ -15,7 +15,7 @@
     .hero{
       position:relative;min-height:75vh;
       /* ✅ Fondo naranja (sin 1.jpg) */
-      background:#f4c36f;
+      background:#f9d392;
       display:grid;place-items:center
     }
     .overlay{position:absolute;inset:0;background:radial-gradient(transparent,rgba(0,0,0,.08))}

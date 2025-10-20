@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -102,7 +101,7 @@
 
     <!-- Botón musical -->
     <button id="musicToggle" class="music-btn" aria-label="Música">
-      <img src="anillos-jime-rafa.jpg" alt="Anillos Jime & Rafa">
+      <img src="🎵" alt="Anillos Jime & Rafa">
     </button>
   </header>
 
@@ -126,11 +125,11 @@
       <div class="grid">
         <img src="1.jpg" alt="Jime y Rafa 1" loading="lazy"/>
         <img src="2.jpg" alt="Jime y Rafa 2" loading="lazy"/>
-        <img src="3.jpg" alt="Jime y Rafa 3" loading="lazy"/><!-- corregido 31.jpg -> 3.jpg -->
+        <img src="31.jpg" alt="Jime y Rafa 3" loading="lazy"/><!-- corregido 31.jpg -> 3.jpg -->
         <img src="4.jpg" alt="Jime y Rafa 4" loading="lazy"/>
         <img src="5.jpg" alt="Jime y Rafa 5" loading="lazy"/>
         <img src="6.jpg" alt="Jime y Rafa 6" loading="lazy"/>
-        <img src="7.jpg" alt="Jime y Rafa 7" loading="lazy"/><!-- corregido 71.jpg -> 7.jpg -->
+        <img src="71.jpg" alt="Jime y Rafa 7" loading="lazy"/><!-- corregido 71.jpg -> 7.jpg -->
         <img src="8.jpg" alt="Jime y Rafa 8" loading="lazy"/>
         <img src="9.jpg" alt="Jime y Rafa 9" loading="lazy"/>
       </div>

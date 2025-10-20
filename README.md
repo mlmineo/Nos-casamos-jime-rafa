@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -20,12 +21,11 @@
     .overlay{position:absolute;inset:0;background:radial-gradient(transparent,rgba(0,0,0,.08))}
     .hero-inner{position:relative;text-align:center;color:#fff;padding:2rem}
 
-    /* Imagen integrada (sin sentir “pegada”) */
+    /* Imagen integrada */
     .hero-logo{
       display:block;margin:0 auto 1.25rem auto;
       width:min(62vw,420px);height:auto;
-      border-radius:14px;
-      box-shadow:none;
+      border-radius:14px;box-shadow:none;
       mix-blend-mode:multiply;
       filter:contrast(1.06) saturate(1.06) brightness(0.98);
     }
@@ -35,9 +35,12 @@
     .date{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.35rem;color:#fff;font-size:1.5rem}
     .subtitle{opacity:.95;margin:.5rem 0 1rem;color:#fff}
 
+    /* Pastilla de countdown */
     .countdown{
-      margin:1rem auto;font-weight:700;letter-spacing:.05em;
-      background:rgba(0,0,0,.16);padding:.6rem 1rem;border-radius:999px;
+      margin:1.25rem auto 1rem;
+      font-weight:700;letter-spacing:.05em;
+      background:rgba(0,0,0,.16);
+      padding:.6rem 1rem;border-radius:999px;
       backdrop-filter:blur(3px);color:#fff;display:inline-block
     }
 
@@ -45,16 +48,18 @@
     .btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
     .btn.primary{background:var(--leaf)} .btn.outline{background:transparent;border:2px solid var(--leaf);color:var(--leaf)}
 
-    /* Botón musical con imagen */
+    /* Botón musical flotante */
     .music-btn{
-      position:absolute;right:1rem;bottom:1rem;
-      width:52px;height:52px;border-radius:50%;padding:0;border:2px solid #fff;
-      background:rgba(255,255,255,.2);backdrop-filter:blur(2px);
-      cursor:pointer;overflow:hidden;display:flex;align-items:center;justify-content:center;
-      box-shadow:0 6px 20px rgba(0,0,0,.18);
+      position:fixed;right:18px;bottom:18px;
+      width:56px;height:56px;border-radius:50%;padding:0;border:0;
+      background:#7a8f69;color:#fff;
+      display:grid;place-items:center;
+      box-shadow:0 8px 30px rgba(0,0,0,.22);
+      cursor:pointer;z-index:1000;
+      transition:transform .15s ease, box-shadow .15s ease, background .2s ease;
     }
-    .music-btn img{width:100%;height:100%;object-fit:cover;border-radius:50%;transition:.25s}
-    .music-btn:hover img{transform:scale(1.06)}
+    .music-btn:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(0,0,0,.26)}
+    .music-btn.is-on{background:#4f6b4b}
 
     main{max-width:960px;margin:auto;padding:2rem 1rem}
     .card{background:#fff;border:1px solid var(--sand);border-radius:18px;padding:1.25rem 1.5rem;margin:1rem 0;box-shadow:0 6px 30px rgba(0,0,0,.06)}
@@ -81,32 +86,31 @@
   <header class="hero">
     <div class="overlay"></div>
     <div class="hero-inner">
-      <!-- Imagen centrada -->
       <img src="anillos-jime-rafa.jpg" class="hero-logo" alt="Anillos Jime & Rafa">
       <h1 class="names">Jime & Rafa</h1>
       <p class="date">14 · 11 · 2025</p>
       <p class="subtitle">¡Nos casamos!</p>
-
-      <!-- ÚNICO contenedor de countdown -->
-      <div id="countdown" class="countdown" aria-live="polite"></div>
-
       <button id="rsvpBtn" class="btn primary">Confirmar asistencia</button>
     </div>
 
-    <!-- Música (usar archivo público del sitio) -->
+    <!-- Audio -->
     <audio id="bgm" preload="auto" loop playsinline>
       <source src="audio/somos-uno.mp3" type="audio/mpeg">
       Tu navegador no soporta el elemento de audio.
     </audio>
 
-    <!-- Botón musical -->
+    <!-- Botón musical con icono -->
     <button id="musicToggle" class="music-btn" aria-label="Música">
-      <img src="[icono-musica](https://github.com/user-attachments/assets/d668cc27-f035-49d6-9357-ce233e636697)
-" alt="Música">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M12 3v11.55a3.5 3.5 0 1 1-2-3.15V6.5l9-2V13.3a3.5 3.5 0 1 1-2-3.15V3.5l-5 1V3z" fill="currentColor"/>
+      </svg>
     </button>
   </header>
 
   <main>
+    <!-- ⏳ Cuenta regresiva arriba del WhatsApp -->
+    <div id="countdown" class="countdown" aria-live="polite"></div>
+
     <section class="card">
       <h2>El Civil</h2>
       <p><strong>Te esperamos el día Viernes 14/11, a las 13:30 hs</strong></p>
@@ -126,33 +130,13 @@
       <div class="grid">
         <img src="1.jpg" alt="Jime y Rafa 1" loading="lazy"/>
         <img src="2.jpg" alt="Jime y Rafa 2" loading="lazy"/>
-        <img src="31.jpg" alt="Jime y Rafa 3" loading="lazy"/><!-- corregido 31.jpg -> 3.jpg -->
+        <img src="3.jpg" alt="Jime y Rafa 3" loading="lazy"/>
         <img src="4.jpg" alt="Jime y Rafa 4" loading="lazy"/>
         <img src="5.jpg" alt="Jime y Rafa 5" loading="lazy"/>
         <img src="6.jpg" alt="Jime y Rafa 6" loading="lazy"/>
-        <img src="71.jpg" alt="Jime y Rafa 7" loading="lazy"/><!-- corregido 71.jpg -> 7.jpg -->
+        <img src="7.jpg" alt="Jime y Rafa 7" loading="lazy"/>
         <img src="8.jpg" alt="Jime y Rafa 8" loading="lazy"/>
         <img src="9.jpg" alt="Jime y Rafa 9" loading="lazy"/>
-      </div>
-    </section>
-
-    <section class="gift card">
-      <h2>Regalo</h2>
-      <p>Tu presencia es lo más importante para nosotros. 💛
-      Si además querés hacernos un regalo te compartimos nuestros datos:</p>
-      <div class="gift-boxes">
-        <div class="gift-box">
-          <p><strong>Alias:</strong> jime.la.gringa</p>
-          <p><strong>CVU:</strong> 0000003100073131930184</p>
-          <p><strong>Nombre:</strong> Mariela Jimena Ormeño</p>
-          <button class="btn copy" data-copy="jime.la.gringa">Copiar alias</button>
-        </div>
-        <div class="gift-box">
-          <p><strong>Alias:</strong> rocco.milo.luli.mp</p>
-          <p><strong>CVU:</strong> 0000003100177678298698</p>
-          <p><strong>Nombre:</strong> Sergio Ra Rodríguez Bentancur</p>
-          <button class="btn copy" data-copy="rocco.milo.luli.mp">Copiar alias</button>
-        </div>
       </div>
     </section>
 
@@ -222,12 +206,12 @@
     });
 
     window.addEventListener('load', async () => {
-      try { await bgm.play(); musicOn = true; musicBtn.style.borderColor='#7a8f69'; }
+      try { await bgm.play(); musicOn = true; musicBtn.classList.add('is-on'); }
       catch { console.log('Autoplay bloqueado. Tocá el botón 🎵'); }
     });
 
     const unlock = async () => {
-      try { if (!musicOn) { await bgm.play(); musicOn = true; musicBtn.style.borderColor='#7a8f69'; } }
+      try { if (!musicOn) { await bgm.play(); musicOn = true; musicBtn.classList.add('is-on'); } }
       catch {}
       document.removeEventListener('click', unlock);
       document.removeEventListener('touchstart', unlock, {passive:true});
@@ -238,8 +222,8 @@
     musicBtn.addEventListener('click', async (ev) => {
       ev.stopPropagation();
       try{
-        if (!musicOn) { await bgm.play(); musicOn = true; musicBtn.style.borderColor='#7a8f69'; }
-        else { bgm.pause(); musicOn = false; musicBtn.style.borderColor='#fff'; }
+        if (!musicOn) { await bgm.play(); musicOn = true; musicBtn.classList.add('is-on'); }
+        else { bgm.pause(); musicOn = false; musicBtn.classList.remove('is-on'); }
       }catch(e){}
     });
 
@@ -261,7 +245,7 @@
       document.getElementById('rsvp').scrollIntoView({behavior:'smooth'});
     });
 
-    /* Copiar alias */
+    /* Copiar alias (si agregás botones .copy en la sección Regalo) */
     document.querySelectorAll('.copy').forEach(btn=>{
       btn.addEventListener('click', async ()=>{
         try{ await navigator.clipboard.writeText(btn.dataset.copy);
